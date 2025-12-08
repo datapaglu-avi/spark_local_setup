@@ -6,6 +6,7 @@ spark = SparkSession.builder \
     .appName("MyJob") \
     .master("spark://spark-master:7077") \
     .config("spark.executor.cores", "2") \
+    .config("spark.cores.max", "4") \
     .config("spark.executor.memory", "2g") \
     .getOrCreate()
 
